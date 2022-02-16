@@ -19,6 +19,10 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
     use 'Shatur/neovim-cmake'
     use 'mfussenegger/nvim-dap'
     use "lukas-reineke/indent-blankline.nvim"
