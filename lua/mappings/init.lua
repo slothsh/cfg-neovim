@@ -7,9 +7,10 @@ vim.g.mapleader = ' '
 map('n', '<C-b>', ':NvimTreeToggle<CR>:NvimTreeRefresh<CR>', opts)
 map('n', '<C-Up><Up>', ':FocusMaximise<CR>', opts)
 map('n', '<C-Down><Down>', ':FocusEqualise<CR>', opts)
+map('n', '<C-p>', ':Telescope find_files<CR>', opts)
+map('n', '<C-f>', ':Telescope live_grep<CR>', opts)
 
 -- Insert mode mappings
 map('i', '<C-Down><Down>', ':FocusEqualise<CR>', opts)
 map('i', '<M-BS>', '<C-w>', opts)
 map('i', '<M-Del>', '<C-o>de', opts)
-map('n', '<C-p>', ':Telescope find_files<CR>', opts)

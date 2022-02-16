@@ -1,5 +1,5 @@
 require('telescope').setup{
-  defaults = {
+defaults = {
     -- Default configuration for telescope goes here:
     -- config_key = value,
     mappings = {
@@ -12,8 +12,12 @@ require('telescope').setup{
     }
   },
   pickers = {
+    live_grep = {
+
+    },
+
     find_files = {
-        theme = "dropdown"
+        file_ignore_patterns = { 'node_modules/.*'}
     }
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
