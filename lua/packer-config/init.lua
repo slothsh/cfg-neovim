@@ -21,6 +21,7 @@ return require('packer').startup(function()
     }
     use 'Shatur/neovim-cmake'
     use 'mfussenegger/nvim-dap'
+    use "lukas-reineke/indent-blankline.nvim"
     -- use { 'mg979/vim-visual-multi', run = function() vim.fn['vim-visual-multi#plugin#visual-multi.vim']() end }
     -- use 'tpope/vim-commentary'
 end)
