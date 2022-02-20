@@ -2,8 +2,8 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'EdenEast/nightfox.nvim'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use 'kyazdani42/nvim-tree.lua'
     use 'kyazdani42/nvim-web-devicons'
+    use 'kyazdani42/nvim-tree.lua'
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
@@ -26,6 +26,7 @@ return require('packer').startup(function()
     use 'Shatur/neovim-cmake'
     use 'mfussenegger/nvim-dap'
     use "lukas-reineke/indent-blankline.nvim"
+    use 'RRethy/nvim-align'
     -- use { 'mg979/vim-visual-multi', run = function() vim.fn['vim-visual-multi#plugin#visual-multi.vim']() end }
     -- use 'tpope/vim-commentary'
 end)

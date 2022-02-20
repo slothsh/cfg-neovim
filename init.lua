@@ -1,3 +1,4 @@
+-- Third-party plugins
 require('settings')
 require('nvim-tree-config')
 require('nvimcomment-config')
@@ -13,3 +14,6 @@ require('cmake-config')
 require('telescope-config')
 require('indentblankline-config')
 require('lualine-config')
+
+-- User functions
+require('functions.text-editing')
