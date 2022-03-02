@@ -5,12 +5,20 @@ function duplicate_line(direction)
     direction = math.max(0, direction)
 
     -- Get current cursor info
-    local r,c = unpack(vim.api.nvim_win_get_cursor(0))
+    local r,c = unpack(a.nvim_win_get_cursor(0))
     local buffer = a.nvim_get_current_buf()
     local current_line = a.nvim_get_current_line()
     local col_end = #current_line
     local row_start = (direction > 0) and r or r - 1
     local format_string = '\n%s'
+
+    if row_start == 0 then
+        a.nvim_buf_set_lines(0, 0, 0, false, {''})
+        row_start = 1
+        direction = 0
+        format_string = '%s'
+    end
+
     local new_line = string.format(format_string, current_line)
 
     -- Paste new content
@@ -18,3 +26,4 @@ function duplicate_line(direction)
     a.nvim_paste(new_line, false, -1)
     a.nvim_win_set_cursor(0, { r + direction, c })
 end
+
