@@ -1,4 +1,5 @@
 -- Third-party plugins
+require('packer-config')
 require('settings')
 require('nvim-tree-config')
 require('nvimcomment-config')
@@ -9,7 +10,6 @@ require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')
 require('treesitter-config')
 require('colorschemes-config.material')
-require('packer-config')
 require('cmake-config')
 require('telescope-config')
 require('indentblankline-config')
