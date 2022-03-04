@@ -27,6 +27,9 @@ return require('packer').startup(function()
     use 'mfussenegger/nvim-dap'
     use "lukas-reineke/indent-blankline.nvim"
     use 'RRethy/nvim-align'
+    use 'marko-cerovac/material.nvim'
+    use 'mvllow/modes.nvim'
+    use 'romgrk/barbar.nvim'
     -- use { 'mg979/vim-visual-multi', run = function() vim.fn['vim-visual-multi#plugin#visual-multi.vim']() end }
     -- use 'tpope/vim-commentary'
 end)
