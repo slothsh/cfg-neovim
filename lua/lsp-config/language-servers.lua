@@ -33,12 +33,24 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 -- map buffer local keybindings when the language server attaches
 local servers = { 'pyright', 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss' }
 for _, lsp in pairs(servers) do
-    require('lspconfig')[lsp].setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = {
-            -- This will be the default in neovim 0.7+
-            debounce_text_changes = 150,
+    if lsp == 'emmet_ls' then
+        require('lspconfig')[lsp].setup {
+            on_attach = on_attach,
+            filetypes = { 'html', 'vue', 'vuex', 'htm', 'js', 'jsx', 'ts', 'tsx' },
+            capabilities = capabilities,
+            flags = {
+                -- This will be the default in neovim 0.7+
+                debounce_text_changes = 150,
+            }
         }
-    }
+    else 
+        require('lspconfig')[lsp].setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            flags = {
+                -- This will be the default in neovim 0.7+
+                debounce_text_changes = 150,
+            }
+        }
+    end
 end

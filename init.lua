@@ -4,7 +4,6 @@ require('settings')
 require('nvim-tree-config')
 require('nvimcomment-config')
 require('autopairs-config')
-require('mappings')
 -- require('focus-config')
 require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')
@@ -15,7 +14,10 @@ require('telescope-config')
 require('indentblankline-config')
 require('lualine-config')
 require('modes-config')
+require('toggleterm-config')
 
 -- User functions
 require('functions.text-editing')
 
+-- Remap keys
+require('mappings')
