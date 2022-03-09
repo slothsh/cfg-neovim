@@ -1,6 +1,7 @@
 -- Third-party plugins
 require('packer-config')
 require('settings')
+require('mappings')
 require('nvim-tree-config')
 require('nvimcomment-config')
 require('autopairs-config')
@@ -20,4 +21,3 @@ require('toggleterm-config')
 require('functions.text-editing')
 
 -- Remap keys
-require('mappings')
