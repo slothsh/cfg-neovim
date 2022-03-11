@@ -6,6 +6,7 @@ local opts = {noremap = true, silent = true}
 vim.g.mapleader = ' '
 
 -- Normal mode mappings
+map('n', 'q', 'i', opts)
 map('n', '<C-b>', ':NvimTreeToggle<CR>:NvimTreeRefresh<CR>', opts)
 map('n', '<leader><Up>', ':FocusMaximise<CR>', opts)
 map('n', '<leader><Down>', ':FocusEqualise<CR>', opts)
