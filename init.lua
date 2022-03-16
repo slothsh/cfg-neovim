@@ -16,6 +16,7 @@ require('indentblankline-config')
 require('lualine-config')
 require('modes-config')
 require('toggleterm-config')
+require('luasnip-config')
 
 -- User functions
 require('functions.text-editing')

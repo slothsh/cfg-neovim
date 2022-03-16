@@ -31,6 +31,7 @@ return require('packer').startup(function()
     use 'mvllow/modes.nvim'
     use 'romgrk/barbar.nvim'
     use {"akinsho/nvim-toggleterm.lua"}
+    use "rafamadriz/friendly-snippets"
     -- use { 'mg979/vim-visual-multi', run = function() vim.fn['vim-visual-multi#plugin#visual-multi.vim']() end }
     -- use 'tpope/vim-commentary'
 end)
