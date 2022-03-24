@@ -37,6 +37,8 @@ map('n', '<leader>9', '9<C-w>w<CR>', opts)
 
 -- Visual mode mappings
 map('v', '<leader>a', ':\'<,\'>Align =<CR>', opts)
+map('v', '<S-Up>', '{', opts)
+map('v', '<S-Down>', '}', opts)
 
 -- Insert mode mappings
 map('i', '<C-Down><Down>', ':FocusEqualise<CR>', opts)
