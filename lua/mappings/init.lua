@@ -36,6 +36,9 @@ map('n', '<leader>8', '8<C-w>w<CR>', opts)
 map('n', '<leader>9', '9<C-w>w<CR>', opts)
 map('n', '+', ':res +5<CR>', opts)
 map('n', '-', ':res -5<CR>', opts)
+map('n', '<leader>+', '+5<C-W><<CR>', opts)
+map('n', '<leader>-', '-5<C-W>><CR>', opts)
+map('n', '<leader>nn', ':noh<CR>', opts)
 
 -- Visual mode mappings
 map('v', '<leader>a', ':\'<,\'>Align =<CR>', opts)
