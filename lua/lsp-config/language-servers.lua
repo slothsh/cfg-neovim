@@ -44,7 +44,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss', 'bashls' }
+local servers = { 'pyright', 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss', 'bashls', 'rls' }
 for _, lsp in pairs(servers) do
     if lsp == 'emmet_ls' then
         require('lspconfig')[lsp].setup {
@@ -54,6 +54,22 @@ for _, lsp in pairs(servers) do
             flags = {
                 -- This will be the default in neovim 0.7+
                 debounce_text_changes = 150,
+            }
+        }
+    elseif lsp == 'rls' then
+        require('lspconfig')[lsp].setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            flags = {
+                -- This will be the default in neovim 0.7+
+                debounce_text_changes = 150,
+            },
+            settings = {
+                rust = {
+                    unstable_features = true,
+                    build_on_save = false,
+                    all_features = true,
+                }
             }
         }
     else 
