@@ -23,7 +23,6 @@ return require('packer').startup(function()
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use 'Shatur/neovim-cmake'
     use 'mfussenegger/nvim-dap'
     use "lukas-reineke/indent-blankline.nvim"
     use 'RRethy/nvim-align'
@@ -32,6 +31,7 @@ return require('packer').startup(function()
     use 'romgrk/barbar.nvim'
     use {"akinsho/nvim-toggleterm.lua"}
     use "rafamadriz/friendly-snippets"
+    -- use 'Shatur/neovim-cmake'
     -- use { 'mg979/vim-visual-multi', run = function() vim.fn['vim-visual-multi#plugin#visual-multi.vim']() end }
     -- use 'tpope/vim-commentary'
 end)

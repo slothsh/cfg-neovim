@@ -7,6 +7,7 @@ vim.g.mapleader = ' '
 
 -- Normal mode mappings
 map('n', 'q', 'i', opts)
+map('n', 'Q', 'I', opts)
 map('n', '<C-b>', ':NvimTreeToggle<CR>:NvimTreeRefresh<CR>', opts)
 map('n', '<leader><Up>', ':FocusMaximise<CR>', opts)
 map('n', '<leader><Down>', ':FocusEqualise<CR>', opts)
@@ -39,6 +40,7 @@ map('n', '-', ':res -5<CR>', opts)
 map('n', '<leader>+', '+5<C-W><<CR>', opts)
 map('n', '<leader>-', '-5<C-W>><CR>', opts)
 map('n', '<leader>nn', ':noh<CR>', opts)
+map('n', '<leader><C-a>', 'ggVG', opts)
 
 -- Visual mode mappings
 map('v', '<leader>a', ':\'<,\'>Align =<CR>', opts)
