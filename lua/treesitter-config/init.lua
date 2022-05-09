@@ -30,7 +30,7 @@ require('nvim-treesitter.configs').setup {
       enable = true,
       keymaps = {
           init_selection = "gnn",
-          mode_incremental = "grn",
+          node_incremental = "grn",
           scope_incremental = "grc",
           node_decremental = "grm",
       },
