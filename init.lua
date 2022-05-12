@@ -1,5 +1,6 @@
 -- Third-party plugins
 require('packer-config')
+require('colorschemes-config.material')
 require('settings')
 require('mappings')
 require('nvim-tree-config')
@@ -9,7 +10,6 @@ require('autopairs-config')
 require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')
 require('treesitter-config')
-require('colorschemes-config.material')
 require('telescope-config')
 require('indentblankline-config')
 require('lualine-config')
@@ -22,3 +22,7 @@ require('luasnip-config')
 require('functions.text-editing')
 
 -- Remap keys
+
+-- Themes
+-- vim.opt.background = "dark"
+-- vim.cmd([[colorscheme gruvbox]])

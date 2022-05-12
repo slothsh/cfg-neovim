@@ -35,4 +35,5 @@ return require('packer').startup(function()
     -- use { 'mg979/vim-visual-multi', run = function() vim.fn['vim-visual-multi#plugin#visual-multi.vim']() end }
     -- use 'tpope/vim-commentary'
     use "rktjmp/lush.nvim"
+    use { "ellisonleao/gruvbox.nvim" }
 end)
