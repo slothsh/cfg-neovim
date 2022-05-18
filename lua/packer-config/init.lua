@@ -12,7 +12,7 @@ return require('packer').startup(function()
     use 'onsails/lspkind-nvim'
     use 'windwp/nvim-autopairs'
     use 'terrortylor/nvim-comment'
-    use "beauwilliams/focus.nvim"
+    use 'beauwilliams/focus.nvim'
     use 'olimorris/onedarkpro.nvim'
     use 'nvim-lua/plenary.nvim'
     use {
@@ -25,15 +25,16 @@ return require('packer').startup(function()
     }
     -- use 'Shatur/neovim-cmake'
     use 'mfussenegger/nvim-dap'
-    use "lukas-reineke/indent-blankline.nvim"
+    use 'lukas-reineke/indent-blankline.nvim'
     use 'RRethy/nvim-align'
     use 'marko-cerovac/material.nvim'
     use 'mvllow/modes.nvim'
     use 'romgrk/barbar.nvim'
-    use {"akinsho/nvim-toggleterm.lua"}
-    use "rafamadriz/friendly-snippets"
+    use {'akinsho/nvim-toggleterm.lua'}
+    use 'rafamadriz/friendly-snippets'
     -- use { 'mg979/vim-visual-multi', run = function() vim.fn['vim-visual-multi#plugin#visual-multi.vim']() end }
     -- use 'tpope/vim-commentary'
-    use "rktjmp/lush.nvim"
-    use { "ellisonleao/gruvbox.nvim" }
+    use 'rktjmp/lush.nvim'
+    use { 'ellisonleao/gruvbox.nvim' }
+    use 'PowerShell/PowerShellEditorServices'
 end)

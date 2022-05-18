@@ -15,7 +15,7 @@ set.cmdheight = 2                         -- More space for displaying messages
 set.iskeyword = set.iskeyword + '-'       -- treat dash separated words as a word text object"
 set.mouse = 'a'                           -- Enable your mouse
 set.splitbelow = true                     -- Horizontal splits will automatically be below
-set.splitright = true                     -- Vertical splits will automatically be to the right
+set.splitright = false                    -- Vertical splits will automatically be to the right
 set.termguicolors = true                  -- Support terminal GUI colours
 set.conceallevel = 0                      -- So that I can see `` in markdown files
 set.tabstop = 4                           -- Insert 2 spaces for a tab
@@ -34,6 +34,6 @@ set.backup = false                        -- This is recommended by coc
 set.writebackup = false                   -- This is recommended by coc
 set.updatetime = 300                      -- Faster completion
 set.timeoutlen = 500                      -- By default timeoutlen is 1000 ms
-set.formatoptions = set.formatoptions - 'cro' -- Stop newline continution of comments
+set.formatoptions = set.formatoptions - 'cro/' -- Stop newline continution of comments
 set.clipboard = 'unnamedplus'             -- Copy paste between vim and everything else
 

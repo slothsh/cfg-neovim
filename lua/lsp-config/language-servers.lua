@@ -43,7 +43,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss', 'bashls', 'rls' }
+local servers = { 'pyright', 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss', 'bashls', 'rls', 'powershell_es' }
 for _, lsp in pairs(servers) do
     if lsp == 'emmet_ls' then
         require('lspconfig')[lsp].setup {
@@ -70,6 +70,10 @@ for _, lsp in pairs(servers) do
                     all_features = true,
                 }
             }
+        }
+    elseif lsp == 'powershell_es' then
+        require('lspconfig')[lsp].setup {
+            bundle_path = 'C:/Users/snowf/AppData/Local/PowershellEditorServices',
         }
     else 
         require('lspconfig')[lsp].setup {
