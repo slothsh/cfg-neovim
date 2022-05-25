@@ -27,7 +27,6 @@ set.autoindent  = true                    -- Good auto indent
 set.laststatus = 0                        -- Always display the status line
 set.number = true                         -- Line numbers
 set.cursorline  = true                    -- Enable highlighting of the current line
-set.background = 'dark'                   -- tell vim what the background color looks like
 set.showtabline = 2                       -- Always show tabs
 set.showmode = false                      -- We don't need to see things like -- INSERT --
 set.backup = false                        -- This is recommended by coc
@@ -37,3 +36,6 @@ set.timeoutlen = 500                      -- By default timeoutlen is 1000 ms
 set.formatoptions = set.formatoptions - 'cro/' -- Stop newline continution of comments
 set.clipboard = 'unnamedplus'             -- Copy paste between vim and everything else
 
+-- Theme
+set.background = 'dark'                   -- tell vim what the background color looks like
+-- vim.cmd([[colorscheme gruvbox]])
