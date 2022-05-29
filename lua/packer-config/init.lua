@@ -37,4 +37,5 @@ return require('packer').startup(function()
     use 'rktjmp/lush.nvim'
     use { 'ellisonleao/gruvbox.nvim' }
     use 'PowerShell/PowerShellEditorServices'
+    use 'p00f/nvim-ts-rainbow'
 end)

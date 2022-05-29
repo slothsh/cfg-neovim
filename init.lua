@@ -16,6 +16,7 @@ require('lualine-config')
 require('modes-config')
 require('toggleterm-config')
 require('luasnip-config')
+require('tsrainbow-config')
 -- require('cmake-config')
 
 -- User functions

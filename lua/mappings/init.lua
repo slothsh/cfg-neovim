@@ -82,6 +82,7 @@ map('n', '<A-9>', ':BufferGoto 9<CR>', opts)
 map('n', '<A-0>', ':BufferLast<CR>', opts)
 -- Close buffer
 map('n', '<A-c>', ':BufferClose<CR>', opts)
+map('n', '<leader><A-c>', ':BufferCloseAllButCurrent<CR>', opts)
 -- Wipeout buffer
 --                 :BufferWipeout<CR>
 -- Close commands

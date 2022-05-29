@@ -24,7 +24,7 @@ vim.g.bufferline = {
   -- Enable/disable icons
   -- if set to 'numbers', will show buffer index in the tabline
   -- if set to 'both', will show buffer index and icons in the tabline
-  icons = true,
+  icons = 'both',
 
   -- If set, the icon color will follow its corresponding buffer
   -- highlight group. By default, the Buffer*Icon group is linked to the
@@ -41,7 +41,7 @@ vim.g.bufferline = {
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.
-  insert_at_end = false,
+  insert_at_end = true,
   insert_at_start = false,
 
   -- Sets the maximum padding width with which to surround each tab
@@ -64,4 +64,4 @@ vim.g.bufferline = {
   -- Sets the name of unnamed buffers. By default format is "[Buffer X]"
   -- where X is the buffer number. But only a static string is accepted here.
   no_name_title = nil,
-}p
+}
