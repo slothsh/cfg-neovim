@@ -1,0 +1,16 @@
+{
+    "title1": {
+        "prefix": "all1",
+        "body": [
+            "Copyright (C) Stefan Olivier",
+            "Written by Stefan Olivier",
+            "<https://stefanolivier.com>",
+            "----------------------------",
+            "Description: $1
+        ],
+        "luasnip": {
+            "priority": 2000,
+            "autotrigger": true
+        }
+    }
+}
