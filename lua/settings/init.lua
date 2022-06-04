@@ -1,5 +1,6 @@
 local a = vim.api
 local set = vim.opt
+require('functions.utility')
 
 a.nvim_set_var('mapleader', '\\<Space>')  -- set.leader key
 
@@ -15,7 +16,7 @@ set.cmdheight = 2                         -- More space for displaying messages
 set.iskeyword = set.iskeyword + '-'       -- treat dash separated words as a word text object"
 set.mouse = 'a'                           -- Enable your mouse
 set.splitbelow = true                     -- Horizontal splits will automatically be below
-set.splitright = true                    -- Vertical splits will automatically be to the right
+set.splitright = true                     -- Vertical splits will automatically be to the right
 set.termguicolors = true                  -- Support terminal GUI colours
 set.conceallevel = 0                      -- So that I can see `` in markdown files
 set.tabstop = 4                           -- Insert 2 spaces for a tab
@@ -39,3 +40,13 @@ set.clipboard = 'unnamedplus'             -- Copy paste between vim and everythi
 -- Theme
 set.background = 'dark'                   -- tell vim what the background color looks like
 -- vim.cmd([[colorscheme gruvbox]])
+
+-- Configure default shell to powershell
+if is_os_winnt() then
+    vim.cmd([[
+        set shell=pwsh
+        set shellcmdflag="-Command -NoLogo"
+        set shellquote=\"
+        set shellxquote=
+    ]])
+end

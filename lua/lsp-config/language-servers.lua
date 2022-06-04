@@ -43,7 +43,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss', 'bashls', 'rls', 'powershell_es' }
+local servers = { 'pyright', 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss', 'bashls', 'rls', 'powershell_es', 'sumneko_lua' }
 for _, lsp in pairs(servers) do
     if lsp == 'emmet_ls' then
         require('lspconfig')[lsp].setup {
@@ -74,6 +74,35 @@ for _, lsp in pairs(servers) do
     elseif lsp == 'powershell_es' then
         require('lspconfig')[lsp].setup {
             bundle_path = 'C:/Users/snowf/AppData/Local/PowershellEditorServices',
+        }
+    elseif lsp == 'sumneko_lua' then
+        require('lspconfig')[lsp].setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            flags = {
+                -- This will be the default in neovim 0.7+
+                debounce_text_changes = 150,
+            },
+            settings = {
+                Lua = {
+                    runtime = {
+                        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                        version = 'LuaJIT',
+                    },
+                    diagnostics = {
+                        -- Get the language server to recognize the `vim` global
+                        globals = {'vim'},
+                    },
+                    workspace = {
+                        -- Make the server aware of Neovim runtime files
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                    -- Do not send telemetry data containing a randomized but unique identifier
+                    telemetry = {
+                        enable = false,
+                    },
+                },
+            },
         }
     else 
         require('lspconfig')[lsp].setup {

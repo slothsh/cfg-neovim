@@ -1,28 +1,27 @@
--- Third-party plugins
+-- Essential Plugins
 require('packer-config')
-require('colorschemes-config.material')
 require('settings')
 require('mappings')
-require('nvim-tree-config')
-require('nvimcomment-config')
-require('autopairs-config')
--- require('focus-config')
-require('lsp-config.language-servers')
-require('lsp-config.nvim-cmp')
 require('treesitter-config')
 require('telescope-config')
+
+-- Other Plugins
+require('autopairs-config')
+require('colorschemes-config.material')
 require('indentblankline-config')
+require('lsp-config.language-servers')
+require('lsp-config.nvim-cmp')
 require('lualine-config')
-require('modes-config')
-require('toggleterm-config')
 require('luasnip-config')
+require('modes-config')
+require('nvim-tree-config')
+require('nvimcomment-config')
 require('tsrainbow-config')
--- require('cmake-config')
+require('nvimdap-config')
 
 -- User functions
 require('functions.text-editing')
-
--- Remap keys
+require('functions.utility')
 
 -- Themes
 -- vim.opt.background = "dark"

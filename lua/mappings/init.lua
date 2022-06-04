@@ -1,7 +1,9 @@
 require('functions.text-editing')
+require('functions.utility')
 
 local map = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
+
 
 vim.g.mapleader = ' '
 
@@ -44,6 +46,7 @@ map('n', '<M-->', ':vert res -8<CR>', opts)
 map('n', '<leader>-', ':vert res 0<CR>', opts)
 map('n', '<leader>nn', ':noh<CR>', opts)
 map('n', '<leader><C-a>', 'ggVG', opts)
+map('n', '<leader>`', ':terminal<CR>', opts)
 
 -- Visual mode mappings
 map('v', '<leader>a', ':\'<,\'>Align =<CR>', opts)
@@ -60,6 +63,8 @@ map('i', '<C-Up>', '<C-o>:lua duplicate_line(-1)<CR>', opts)
 map('i', '<C-Down>', '<C-o>:lua duplicate_line(1)<CR>', opts)
 map('i', '<S-Up>', '<C-o>{', opts)
 map('i', '<S-Down>', '<C-o>}', opts)
+map('i', '<C-A-Up>', '<C-o><S-o>', opts)
+map('i', '<C-A-Down>', '<C-o>o', opts)
 
 -- barbar mappings
 --
@@ -99,3 +104,9 @@ map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
+
+-- Terminal mappings
+map('t', '<A-c>', '<C-\\><C-n>:bd!<CR>', opts)
+map('t', '<Esc>', '<C-\\><C-n><CR>', opts)
+
+
