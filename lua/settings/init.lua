@@ -6,7 +6,7 @@ a.nvim_set_var('mapleader', '\\<Space>')  -- set.leader key
 set.syntax = 'enable'                     -- Enables syntax highlighing
 set.relativenumber = true                 -- Use relative line numbering
 set.hidden = true                         -- Required to keep multiple buffers open multiple buffers
-set.wrap = false                          -- Display long lines as just one line
+set.wrap = true                           -- Display long lines as just one line
 set.encoding = 'utf-8'                    -- The encoding displayed
 set.pumheight = 10                        -- Makes popup menu smaller
 set.fileencoding = 'utf-8'                -- The encoding written to file
