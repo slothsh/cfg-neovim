@@ -38,7 +38,9 @@ set.formatoptions = set.formatoptions - 'cro/' -- Stop newline continution of co
 set.clipboard = 'unnamedplus'             -- Copy paste between vim and everything else
 
 -- Theme
-set.background = 'dark'                   -- tell vim what the background color looks like
+-- set.background = 'dark'
+vim.g.sonokai_style = 'default'
+vim.cmd('colorscheme sonokai')
 -- vim.cmd([[colorscheme gruvbox]])
 
 -- Configure default shell to powershell

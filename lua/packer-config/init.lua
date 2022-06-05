@@ -33,4 +33,6 @@ return require('packer').startup(function()
     use { 'ellisonleao/gruvbox.nvim' }
     use 'PowerShell/PowerShellEditorServices'
     use 'p00f/nvim-ts-rainbow'
+    use 'savq/melange'
+    use 'sainnhe/sonokai'
 end)

@@ -1,5 +1,5 @@
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
-    auto_reload_on_write = true,
+    auto_reload_on_write = false,
     create_in_closed_folder = false,
     disable_netrw = true,
     hijack_cursor = false,
@@ -14,7 +14,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     reload_on_bufenter = false,
     respect_buf_cwd = false,
     view = {
-        adaptive_size = false,
+        adaptive_size = true,
         width = 40,
         height = 30,
         hide_root_folder = true,
@@ -33,7 +33,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     renderer = {
         add_trailing = false,
         group_empty = false,
-        highlight_git = false,
+        highlight_git = true,
         highlight_opened_files = "none",
         root_folder_modifier = ":~",
         indent_markers = {
@@ -86,7 +86,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
         auto_open = true,
     },
     update_focused_file = {
-        enable = false,
+        enable = true,
         update_cwd = false,
         ignore_list = {},
     },
@@ -111,7 +111,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
         exclude = {},
     },
     git = {
-        enable = true,
+        enable = false,
         ignore = true,
         timeout = 400,
     },
