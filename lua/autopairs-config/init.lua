@@ -11,5 +11,15 @@ require('nvim-autopairs').setup({
     map_cr = true,
     map_bs = true,  -- map the <BS> key
     map_c_h = false,  -- Map the <C-h> key to delete a pair
-    map_c_w = false, -- map <c-w> to delete a pair if possible
+    map_c_w = true, -- map <c-w> to delete a pair if possible
+    fast_wrap = {
+        map = '<M-e>',
+        chars = { '{', '[', '(', '"', "'" },
+        pattern = [=[[%'%"%)%>%]%)%}%,]]=],
+        end_key = '$',
+        keys = 'qwertyuiopzxcvbnmasdfghjkl',
+        check_comma = true,
+        highlight = 'Search',
+        highlight_grey='Comment'
+    },
 })
