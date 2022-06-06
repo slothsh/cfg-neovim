@@ -17,6 +17,8 @@ require('nvim-tree-config')
 require('nvimcomment-config')
 require('tsrainbow-config')
 require('nvimdap-config')
+require('nvimgitsigns-config')
+require('nvimgps-config')
 
 -- User functions
 require('functions.text-editing')

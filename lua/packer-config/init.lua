@@ -35,4 +35,6 @@ return require('packer').startup(function()
     use 'p00f/nvim-ts-rainbow'
     use 'savq/melange'
     use 'sainnhe/sonokai'
+    use { 'lewis6991/gitsigns.nvim' }
+    use { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" }
 end)
