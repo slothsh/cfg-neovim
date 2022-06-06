@@ -6,7 +6,7 @@
             "Written by Stefan Olivier",
             "<https://stefanolivier.com>",
             "----------------------------",
-            "Description: $1
+            "Description: $0
         ],
         "luasnip": {
             "priority": 2000,

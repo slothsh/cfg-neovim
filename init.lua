@@ -6,12 +6,12 @@ require('treesitter-config')
 require('telescope-config')
 
 -- Other Plugins
+require('luasnip-config')
 require('autopairs-config')
 require('indentblankline-config')
 require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')
 require('lualine-config')
-require('luasnip-config')
 require('modes-config')
 require('nvim-tree-config')
 require('nvimcomment-config')
