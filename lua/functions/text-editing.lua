@@ -6,7 +6,6 @@ function duplicate_line(direction)
 
     -- Get current cursor info
     local r,c = unpack(a.nvim_win_get_cursor(0))
-    local buffer = a.nvim_get_current_buf()
     local current_line = a.nvim_get_current_line()
     local col_end = #current_line
     local row_start = (direction > 0) and r or r - 1
@@ -22,6 +21,7 @@ function duplicate_line(direction)
     local new_line = string.format(format_string, current_line)
 
     -- Paste new content
+    print(string.format('r: %s, c: %s, start: %s, end: %s', r, c, row_start, col_end))
     a.nvim_win_set_cursor(0, { row_start, col_end })
     a.nvim_paste(new_line, false, -1)
     a.nvim_win_set_cursor(0, { r + direction, c })

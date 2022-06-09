@@ -1,4 +1,5 @@
 local a = vim.api
+local g = vim.g
 local set = vim.opt
 require('functions.utility')
 
@@ -52,3 +53,6 @@ if is_os_winnt() then
         set shellxquote=
     ]])
 end
+
+-- Vim Move Config
+vim.cmd([[ let g:move_key_modifier = 'C' ]])
