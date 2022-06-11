@@ -40,8 +40,8 @@ set.clipboard = 'unnamedplus'             -- Copy paste between vim and everythi
 
 -- Theme
 -- set.background = 'dark'
-vim.g.sonokai_style = 'default'
-vim.cmd('colorscheme sonokai')
+-- vim.g.sonokai_style = 'default'
+-- vim.cmd('colorscheme sonokai')
 -- vim.cmd([[colorscheme gruvbox]])
 
 -- Configure default shell to powershell

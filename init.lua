@@ -19,6 +19,7 @@ require('tsrainbow-config')
 require('nvimdap-config')
 require('nvimgitsigns-config')
 require('nvimgps-config')
+require('colorschemes-config.github')
 
 -- User functions
 require('functions.text-editing')
