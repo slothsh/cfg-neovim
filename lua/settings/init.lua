@@ -56,3 +56,6 @@ end
 
 -- Vim Move Config
 vim.cmd([[ let g:move_key_modifier = 'C' ]])
+
+-- Disable Github Copilot
+vim.cmd([[ let g:copilot_enabled = 0 ]])

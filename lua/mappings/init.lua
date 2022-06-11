@@ -117,4 +117,12 @@ map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 map('t', '<A-c>', '<C-\\><C-n>:bd!<CR>', opts)
 map('t', '<Esc>', '<C-\\><C-n><CR>', opts)
 
+-- Copilot mappings
+vim.cmd([[
+    imap <silent><script><expr> <C-\> copilot#Accept("\<CR>")
+    let g:copilot_no_tab_map = v:true
+]])
+
+-- Add key mapping to enable github copilot globally
+map('n', '<leader>ggp', ':lua toggle_github_copilot()<CR>', opts)
 

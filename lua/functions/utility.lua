@@ -9,3 +9,13 @@ function get_os_terminal()
 
     return 'zsh'
 end
+
+function toggle_github_copilot()
+    if vim.g.copilot_enabled == 1 then
+        vim.g.copilot_enabled = 0
+        print "Copilot disabled"
+    else
+        vim.g.copilot_enabled = 1
+        print "Copilot enabled"
+    end
+end

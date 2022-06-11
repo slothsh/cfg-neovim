@@ -39,4 +39,5 @@ return require('packer').startup(function()
     use { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" }
     use { 'matze/vim-move' }
     use "projekt0n/github-nvim-theme"
+    use "github/copilot.vim"
 end)
