@@ -51,6 +51,7 @@ map('n', '<leader>-', ':vert res 0<CR>', opts)
 map('n', '<leader>nn', ':noh<CR>', opts)
 map('n', '<leader><C-a>', 'ggVG', opts)
 map('n', '<leader>`', ':terminal<CR>', opts)
+map('n', '!', ':!', opts)
 
 -- Visual mode mappings
 map('v', '<leader>a', ':\'<,\'>Align =<CR>', opts)

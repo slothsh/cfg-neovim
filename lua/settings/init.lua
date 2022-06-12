@@ -47,9 +47,9 @@ set.clipboard = 'unnamedplus'             -- Copy paste between vim and everythi
 -- Configure default shell to powershell
 if is_os_winnt() then
     vim.cmd([[
-        set shell=pwsh
-        set shellcmdflag="-Command -NoLogo"
-        set shellquote=\"
+        set shell=pwsh.exe
+        set shellcmdflag=-c
+        set shellquote=
         set shellxquote=
     ]])
 end
