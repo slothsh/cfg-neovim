@@ -43,8 +43,9 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss', 'bashls', 'rls', 'powershell_es', 'sumneko_lua' }
+local servers = { 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'emmet_ls', 'tailwindcss', 'bashls', 'rls', 'powershell_es', 'sumneko_lua', 'pylsp' }
 for _, lsp in pairs(servers) do
+
     if lsp == 'emmet_ls' then
         require('lspconfig')[lsp].setup {
             on_attach = on_attach,
@@ -55,6 +56,7 @@ for _, lsp in pairs(servers) do
                 debounce_text_changes = 150,
             }
         }
+
     elseif lsp == 'rls' then
         require('lspconfig')[lsp].setup {
             on_attach = on_attach,
@@ -71,10 +73,12 @@ for _, lsp in pairs(servers) do
                 }
             }
         }
+
     elseif lsp == 'powershell_es' then
         require('lspconfig')[lsp].setup {
             bundle_path = 'C:/Users/snowf/AppData/Local/PowershellEditorServices',
         }
+
     elseif lsp == 'sumneko_lua' then
         require('lspconfig')[lsp].setup {
             on_attach = on_attach,
@@ -104,7 +108,15 @@ for _, lsp in pairs(servers) do
                 },
             },
         }
-    else 
+
+    elseif lsp == 'pylsp' then
+        require('lspconfig')[lsp].setup {
+            cmd = { 'pylsp' },
+            filetypes = { 'python' },
+            single_file_support = true
+        }
+
+    else
         require('lspconfig')[lsp].setup {
             on_attach = on_attach,
             capabilities = capabilities,
