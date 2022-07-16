@@ -18,7 +18,7 @@ defaults = {
     },
 
     find_files = {
-        file_ignore_patterns = { 'node_modules/.*'}
+        file_ignore_patterns = { 'node_modules/.*', 'build/cmake/.*'}
     }
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
