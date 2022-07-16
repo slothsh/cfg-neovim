@@ -14,6 +14,7 @@ set.pumheight = 10                             -- Makes popup menu smaller
 set.fileencoding = 'utf-8'                     -- The encoding written to file
 set.ruler = true                               -- Show the cursor position all the time
 set.cmdheight = 2                              -- More space for displaying messages
+set.numberwidth = 6                            -- Wider line number margin
 set.iskeyword = set.iskeyword + '-'            -- treat dash separated words as a word text object"
 set.mouse = 'a'                                -- Enable your mouse
 set.splitbelow = true                          -- Horizontal splits will automatically be below
