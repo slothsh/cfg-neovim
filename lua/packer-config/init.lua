@@ -30,6 +30,7 @@ return require('packer').startup(function()
     use 'mvllow/modes.nvim'
     use 'romgrk/barbar.nvim'
     use 'rafamadriz/friendly-snippets'
+    use 'SoulXP/so-snippets'
     use { 'ellisonleao/gruvbox.nvim' }
     use 'PowerShell/PowerShellEditorServices'
     use 'p00f/nvim-ts-rainbow'
