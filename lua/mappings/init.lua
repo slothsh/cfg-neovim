@@ -52,6 +52,11 @@ map('n', '<leader>nn', ':noh<CR>', opts)
 map('n', '<leader><C-a>', 'ggVG', opts)
 map('n', '<leader>`', ':terminal<CR>', opts)
 map('n', '!', ':!', opts)
+map('n', 'z', ':undo<CR>', opts)
+map('n', 'Z', ':redo<CR>', opts)
+map('n', '<C-W>', ':bd<CR>', opts)
+map('n', '<C-W><CR>', ':bd!<CR>', opts)
+
 
 -- Visual mode mappings
 map('v', '<leader>a', ':\'<,\'>Align =<CR>', opts)
@@ -63,6 +68,7 @@ map('v', '<M-Left>', '<Plug>MoveBlockLeft', opts)
 map('v', '<M-Right>', '<Plug>MoveBlockRight', opts)
 
 -- Insert mode mappings
+map('i', '<C-z>', '<C-o>:undo<CR>', opts)
 map('i', '<C-Down><Down>', ':FocusEqualise<CR>', opts)
 map('i', '<M-BS>', '<C-w>', opts)
 map('i', '<M-Del>', '<C-o>de', opts)
