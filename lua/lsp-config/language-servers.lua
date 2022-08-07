@@ -76,7 +76,7 @@ for _, lsp in pairs(servers) do
 
     elseif lsp == 'powershell_es' then
         require('lspconfig')[lsp].setup {
-            bundle_path = 'C:/Users/snowf/AppData/Local/PowershellEditorServices',
+            bundle_path = 'C:/Users/snowf/dev/bin/PowershellEditorServices/module'
         }
 
     elseif lsp == 'sumneko_lua' then
@@ -114,6 +114,19 @@ for _, lsp in pairs(servers) do
             cmd = { 'pylsp' },
             filetypes = { 'python' },
             single_file_support = true
+        }
+
+    elseif lsp == 'cmake' then
+        require('lspconfig')[lsp].setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            cmd = { 'cmake-language-server' },
+            filetypes = { 'cmake' },
+            init_options = { buildDirectory = 'build' },
+            single_file_support = true,
+            flags = {
+                debounce_text_changes = 150
+            }
         }
 
     else
