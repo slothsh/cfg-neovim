@@ -20,6 +20,7 @@ require('nvimdap-config')
 require('nvimgitsigns-config')
 require('nvimgps-config')
 require('colorschemes-config.github')
+require('align-config')
 
 -- User functions
 require('functions.text-editing')
