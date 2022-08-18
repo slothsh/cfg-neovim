@@ -1,6 +1,9 @@
 require('functions.text-editing')
 require('functions.utility')
 
+-- Plugin mappings
+require('nvimdap-config.mappings')
+
 local map = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
@@ -19,6 +22,7 @@ map('n', '<leader><C-f>', ':Telescope grep_string<CR>', opts)
 map('n', '<leader>bb', ':Telescope buffers<CR>', opts)
 map('n', '<leader>rr', ':Telescope registers<CR>', opts)
 map('n', '<leader>mm', ':Telescope marks<CR>', opts)
+map('n', '<leader>kk', ':Telescope keymaps<CR>', opts)
 map('n', '<M-Up>', '<Plug>MoveLineUp', opts)
 map('n', '<M-Down>', '<Plug>MoveLineDown', opts)
 map('n', '<M-Left>', '<Plug>MoveCharLeft', opts)
@@ -50,9 +54,9 @@ map('n', '<M-->', ':vert res -8<CR>', opts)
 map('n', '<leader>-', ':vert res 0<CR>', opts)
 map('n', '<leader>nn', ':noh<CR>', opts)
 map('n', '<leader><C-a>', 'ggVG', opts)
+map('n', 'z', ':undo<CR>', opts)
 map('n', '<leader>`', ':terminal<CR>', opts)
 map('n', '!', ':!', opts)
-map('n', 'z', ':undo<CR>', opts)
 map('n', 'Z', ':redo<CR>', opts)
 map('n', '<C-W>', ':bd<CR>', opts)
 map('n', '<C-W><CR>', ':bd!<CR>', opts)
