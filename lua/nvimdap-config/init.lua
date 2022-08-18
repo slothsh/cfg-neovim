@@ -13,7 +13,8 @@ dap.adapters.cppdbg = {
     type = 'executable',
     command = 'C:/Users/snowf/dev/bin/cpptools-win64/debugAdapters/bin/OpenDebugAD7',
     options = {
-        detached = false
+        detached = false,
+        initialize_timeout_sec = 10,
     }
 }
 
@@ -32,6 +33,7 @@ dap.configurations.cpp = {
         program = function()
             return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
         end,
+        miDebuggerPath = 'vsdbg',
         cwd = '${workspaceFolder}',
         stopOnEntry = true,
     },
