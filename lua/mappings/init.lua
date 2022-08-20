@@ -59,8 +59,8 @@ map('n', '<leader>nc', ':noh<CR>', opts)
 map('n', '<leader><C-a>', 'ggVG', opts)
 map('n', '<leader>`', ':terminal<CR>', opts)
 map('n', '!', ':!', opts)
-map('n', '<C-W>', ':bd<CR>', opts)
-map('n', '<C-W><CR>', ':bd!<CR>', opts)
+map('n', '<leader>ww', ':bd<CR>', opts)
+map('n', '<leader>ww<CR>', ':bd!<CR>', opts)
 
 
 -- Visual mode mappings
