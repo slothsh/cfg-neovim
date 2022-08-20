@@ -21,6 +21,7 @@ require('nvimgitsigns-config')
 require('nvimgps-config')
 require('colorschemes-config.github')
 require('align-config')
+require('dap-python-config')
 
 -- User functions
 require('functions.text-editing')

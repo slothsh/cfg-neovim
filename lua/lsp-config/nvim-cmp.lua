@@ -19,6 +19,7 @@ cmp.setup {
             require('luasnip').lsp_expand(args.body)
         end,
     },
+
     mapping = {
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -49,10 +50,12 @@ cmp.setup {
             end
         end,
     },
+
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
     },
+
     formatting = {
         format = lspkind.cmp_format({
             mode = 'symbol_text', -- show only symbol annotations
@@ -65,4 +68,8 @@ cmp.setup {
             end
         })
     },
+
+    completion = {
+        keyword_length = 3,
+    }
 }

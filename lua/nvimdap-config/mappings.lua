@@ -4,7 +4,7 @@ vim.g.mapleader = ' '
 
 -- Primary nvim dap keys
 map('n', '<F5>',       "<Cmd>lua require'dap'.continue()<CR>", opts)
-map('n', '<Leader><F5>', "<Cmd>lua require'dap'.terminate()<CR>", opts)
+map('n', '<Leader><F5>', "<Cmd>lua require'dap'.terminate(require\'dap\'.session())<CR>", opts)
 map('n', '<F10>',      "<Cmd>lua require'dap'.step_over()<CR>", opts)
 map('n', '<F11>',      "<Cmd>lua require'dap'.step_into()<CR>", opts)
 map('n', '<F12>',      "<Cmd>lua require'dap'.step_out()<CR>", opts)

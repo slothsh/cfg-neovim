@@ -14,14 +14,14 @@ dap.adapters.cppdbg = {
     command = 'C:/Users/snowf/dev/bin/cpptools-win64/debugAdapters/bin/OpenDebugAD7',
     options = {
         detached = false,
-        initialize_timeout_sec = 10,
+        initialize_timeout_sec = 5
     }
 }
 
 -- Python
 dap.adapters.python = {
   type = 'executable';
-  command = 'path/to/virtualenvs/debugpy/bin/python';
+  command = '~/.virtualenvs/debugpy/Scripts/python';
   args = { '-m', 'debugpy.adapter' };
 }
 
@@ -33,7 +33,8 @@ dap.configurations.cpp = {
         program = function()
             return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
         end,
-        miDebuggerPath = 'vsdbg',
+        MIMode = 'gdb',
+        MIDebuggerPath = 'C:/Users/snowf/dev/bin/cpptools-win64/debugAdapters/vsdbg/bin/vsdbg.exe',
         cwd = '${workspaceFolder}',
         stopOnEntry = true,
     },
