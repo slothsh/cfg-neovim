@@ -38,6 +38,11 @@ set.updatetime = 300                           -- Faster completion
 set.timeoutlen = 500                           -- By default timeoutlen is 1000 ms
 set.formatoptions = set.formatoptions - 'cro/' -- Stop newline continution of comments
 set.clipboard = 'unnamedplus'                  -- Copy paste between vim and everything else
+set.signcolumn = 'yes'
+set.showtabline = 2
+set.scrolloff = 8
+set.ignorecase = true
+set.colorcolumn = '132'
 
 -- Theme
 -- set.background = 'dark'

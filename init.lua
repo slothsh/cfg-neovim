@@ -22,6 +22,7 @@ require('nvimgps-config')
 require('colorschemes-config.github')
 require('align-config')
 require('dap-python-config')
+require('nvim-surround-config')
 
 -- User functions
 require('functions.text-editing')

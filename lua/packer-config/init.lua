@@ -43,4 +43,5 @@ return require('packer').startup(function()
     use "github/copilot.vim"
     use { "Vonr/align.nvim" }
     use 'mfussenegger/nvim-dap-python'
+    use { 'kylechui/nvim-surround', tag = '*' }
 end)

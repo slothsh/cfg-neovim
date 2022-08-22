@@ -3,7 +3,7 @@ require('modes').setup({
 		copy = "#f5c359",
         delete = "#851f00",
 		insert = "#78ccc5",
-		visual = "#9745be",
+		visual = "#d29922",
     },
 
 	-- Set opacity for cursorline and number background
