@@ -20,7 +20,7 @@ db.custom_header = {
 [[⣿⣿⣿⣿⣿⣿⣿ Neighbourhood ⣿⣿⣿⣿⣿⣿⣿⣿]],
 [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ Sloth ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
 [[                              ]],
-[[   ~- Learn, then teach. -~   ]],
+[[   ~- Welcome, traveller -~   ]],
 }
 
 db.preview_file_height = 12
@@ -29,12 +29,16 @@ db.hide_statusline = true
 db.hide_tabline = true
 
 db.custom_center = {
-    {icon = '  ',
+    {icon = '  ',
+        desc = 'Open Browser                            ',
+        action = 'NvimTreeToggle',
+        shortcut = 'Ctrl-B'},
+    {icon = '  ',
         desc = 'Find  File                              ',
         action = 'Telescope find_files find_command=rg,--hidden,--files',
-        shortcut = 'SPC f f'},
-    {icon = '  ',
-        desc = 'Find  word                              ',
+        shortcut = 'Ctrl-P'},
+    {icon = '﬍  ',
+        desc = 'Find  Word                              ',
         action = 'Telescope live_grep',
-        shortcut = 'SPC f w'},
+        shortcut = 'Ctrl-F'},
 }
