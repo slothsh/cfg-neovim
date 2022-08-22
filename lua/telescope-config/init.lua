@@ -1,18 +1,14 @@
 require('telescope').setup{
     defaults = {
-        -- Default configuration for telescope goes here:
-        -- config_key = value,
         mappings = {
             i = {
-                -- map actions.which_key to <C-h> (default: <C-/>)
-                -- actions.which_key shows the mappings for your picker,
-                -- e.g. git_{create, delete, ...}_branch for the git_branches picker
                 ["<C-h>"] = "which_key",
                 ["<C-l>"] = "file_vsplit",
                 ["<C-k>"] = "file_split",
             }
         }
     },
+
     pickers = {
         live_grep = {
             theme = 'ivy'
@@ -21,25 +17,56 @@ require('telescope').setup{
         find_files = {
             file_ignore_patterns = { 'node_modules/.*', 'build/cmake/.*'},
             theme = 'ivy'
-        }
-        -- Default configuration for builtin pickers goes here:
-        -- picker_name = {
-        --   picker_config_key = value,
-        --   ...
-        -- }
-        -- Now the picker_config_key will be applied every time you call this
-        -- builtin picker
+        },
+
+        marks = {
+            theme = 'ivy'
+        },
+
+        keymaps = {
+            theme = 'ivy'
+        },
+
+        buffers = {
+            theme = 'ivy'
+        },
+
+        registers = {
+            theme = 'ivy'
+        },
+
+        jumplist = {
+            theme = 'ivy'
+        },
+
+        grep_string = {
+            theme = 'ivy'
+        },
+
+        git_diff = {
+            theme = 'ivy'
+        },
+
+        git_status = {
+            theme = 'ivy'
+        },
+
+        git_stash = {
+            theme = 'ivy'
+        },
+
+        git_bcommits = {
+            theme = 'ivy'
+        },
+
+        git_commits = {
+            theme = 'ivy'
+        },
+
+        git_branch = {
+            theme = 'ivy'
+        },
     },
 
-    git_diff = {
-
-    },
-
-    extensions = {
-        -- Your extension configuration goes here:
-        -- extension_name = {
-        --   etension_config_key = value,
-        -- }
-        -- please take a look at the readme of the extension you want to configure
-    }
+    extensions = {}
 }
