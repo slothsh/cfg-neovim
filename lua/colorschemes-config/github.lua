@@ -3,5 +3,6 @@ require('github-theme').setup({
     dark_sidebar = true,
 })
 
-vim.cmd([[highlight SignColumn guibg='#090c10']])
+vim.cmd([[colorscheme github_dark_default]])
+vim.cmd([[highlight SignColumn guibg='#0d1117']])
 vim.cmd([[highlight ColorColumn guibg='#0d1117']])

@@ -43,12 +43,7 @@ set.showtabline = 2
 set.scrolloff = 8
 set.ignorecase = true
 set.colorcolumn = '132'
-
--- Theme
--- set.background = 'dark'
--- vim.g.sonokai_style = 'default'
--- vim.cmd('colorscheme sonokai')
--- vim.cmd([[colorscheme gruvbox]])
+set.guicursor = set.guicursor + 'n-v-c-i:blinkon1'
 
 -- Configure default shell to powershell
 if is_os_winnt() then
