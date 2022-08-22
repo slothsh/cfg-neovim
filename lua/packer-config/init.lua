@@ -44,4 +44,5 @@ return require('packer').startup(function()
     use { "Vonr/align.nvim" }
     use 'mfussenegger/nvim-dap-python'
     use { 'kylechui/nvim-surround', tag = '*' }
+    use {'glepnir/dashboard-nvim'}
 end)

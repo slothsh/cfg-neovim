@@ -23,6 +23,7 @@ require('colorschemes-config.github')
 require('align-config')
 require('dap-python-config')
 require('nvim-surround-config')
+require('nvim-dashboard-config')
 
 -- User functions
 require('functions.text-editing')

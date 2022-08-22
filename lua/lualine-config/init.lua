@@ -18,7 +18,7 @@ require('lualine').setup {
         lualine_a = { {'mode', padding = 5} },
         lualine_b = {'branch', 'diff', 'diagnostics'},
         lualine_c = { file_info, {gps.get_location, cond = gps.is_available} },
-        lualine_x = {'encoding', 'fileformat', 'filetype'},
+        lualine_x = {'encoding', 'fileformat', 'filetype', "os.date('%H:%M:%S %d-%m-%Y')"},
         lualine_y = {'progress'},
         lualine_z = {'location'}
     },

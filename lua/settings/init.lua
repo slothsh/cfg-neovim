@@ -47,16 +47,15 @@ set.guicursor = set.guicursor + 'n-v-c-i:blinkon1'
 
 -- Configure default shell to powershell
 if is_os_winnt() then
-    vim.cmd([[
-        set shell=pwsh.exe
-        set shellcmdflag=-c
-        set shellquote=
-        set shellxquote=
-    ]])
+    set.shell = 'pwsh.exe'
+    set.shellcmdflag = '-c'
+    set.shellquote = ''
+    set.shellxquote = ''
 end
 
+
 -- Vim Move Config
-vim.cmd([[ let g:move_key_modifier = 'C' ]])
+g.move_key_modifier = 'C'
 
 -- Disable Github Copilot
-vim.cmd([[ let g:copilot_enabled = 0 ]])
+g.copilot_enabled = 0

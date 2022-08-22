@@ -4,5 +4,5 @@ require('github-theme').setup({
 })
 
 vim.cmd([[colorscheme github_dark_default]])
-vim.cmd([[highlight SignColumn guibg='#0d1117']])
-vim.cmd([[highlight ColorColumn guibg='#0d1117']])
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = '#0d1117' })
+vim.api.nvim_set_hl(0, 'ColorColumn', { bg = '#0d1117' })
