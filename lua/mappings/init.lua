@@ -30,6 +30,8 @@ map('n', '<M-Up>', '<Plug>MoveLineUp', opts)
 map('n', '<M-Down>', '<Plug>MoveLineDown', opts)
 map('n', '<M-Left>', '<Plug>MoveCharLeft', opts)
 map('n', '<M-Right>', '<Plug>MoveCharRight', opts)
+map('n', '<C-j>', ':lua duplicate_line(1)<CR>', opts)
+map('n', '<C-k>', ':lua duplicate_line(-1)<CR>', opts)
 map('n', '<C-Up>', ':lua duplicate_line(-1)<CR>', opts)
 map('n', '<C-Down>', ':lua duplicate_line(1)<CR>', opts)
 map('n', '<S-Up>', '{', opts)
@@ -63,15 +65,10 @@ map('n', '!', ':!', opts)
 map('n', '<leader>ww', ':bd<CR>', opts)
 map('n', '<leader>ww<CR>', ':bd!<CR>', opts)
 
-
 -- Visual mode mappings
 map('v', '<leader>a', ':\'<,\'>Align =<CR>', opts)
 map('v', '<S-Up>', '{', opts)
 map('v', '<S-Down>', '}', opts)
-map('v', '<M-Up>', '<Plug>MoveBlockUp', opts)
-map('v', '<M-Down>', '<Plug>MoveBlockDown', opts)
-map('v', '<M-Left>', '<Plug>MoveBlockLeft', opts)
-map('v', '<M-Right>', '<Plug>MoveBlockRight', opts)
 
 -- Insert mode mappings
 map('i', '<C-z>', '<C-o>:undo<CR>', opts)

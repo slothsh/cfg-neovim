@@ -8,13 +8,13 @@ function duplicate_line(direction)
     local r,c = unpack(a.nvim_win_get_cursor(0))
     local current_line = a.nvim_get_current_line()
     local col_end = #current_line
-    local row_start = (direction > 0) and r or r - 1
+    local row_start = r
     local format_string = '\n%s'
 
     if row_start == 0 then
         a.nvim_buf_set_lines(0, 0, 0, false, {''})
-        row_start = 1
         direction = 0
+        row_start = 1
         format_string = '%s'
     end
 

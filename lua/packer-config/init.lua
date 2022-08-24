@@ -38,7 +38,7 @@ return require('packer').startup(function()
     use 'sainnhe/sonokai'
     use { 'lewis6991/gitsigns.nvim' }
     use { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" }
-    use { 'matze/vim-move' }
+    use 'fedepujol/move.nvim'
     use "projekt0n/github-nvim-theme"
     use "github/copilot.vim"
     use { "Vonr/align.nvim" }
