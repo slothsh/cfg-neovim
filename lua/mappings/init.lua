@@ -26,6 +26,7 @@ map('n', '<leader>mm', ':Telescope marks<CR>', opts)
 map('n', '<leader>kk', ':Telescope keymaps<CR>', opts)
 map('n', '<leader>jj', ':Telescope jumplist<CR>', opts)
 map('n', '<leader>hh', ':Telescope search_history<CR>', opts)
+map('n', '<leader>??', ':Telescope help_tags<CR>', opts)
 map('n', '<M-Up>', '<Plug>MoveLineUp', opts)
 map('n', '<M-Down>', '<Plug>MoveLineDown', opts)
 map('n', '<M-Left>', '<Plug>MoveCharLeft', opts)
@@ -65,6 +66,7 @@ map('n', '!', ':!', opts)
 map('n', '<leader>ww', ':bd<CR>', opts)
 map('n', '<leader>ww<CR>', ':bd!<CR>', opts)
 
+
 -- Visual mode mappings
 map('v', '<leader>a', ':\'<,\'>Align =<CR>', opts)
 map('v', '<S-Up>', '{', opts)
@@ -83,6 +85,7 @@ map('i', '<S-Up>', '<C-o>{', opts)
 map('i', '<S-Down>', '<C-o>}', opts)
 map('i', '<C-A-Up>', '<C-o><S-o>', opts)
 map('i', '<C-A-Down>', '<C-o>o', opts)
+map('i', '<C-l>', '<Del>', opts)
 
 -- barbar mappings
 --

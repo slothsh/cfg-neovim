@@ -131,6 +131,19 @@ for _, lsp in pairs(servers) do
             }
         }
 
+    elseif lsp == 'rls' then
+        require('lspconfig')[lsp].setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            cmd = {"rustup", "run", "nightly", "rls"},
+            init_options = { buildDirectory = 'build' },
+            filetypes = { "rust" },
+            single_file_support = true,
+            flags = {
+                debounce_text_changes = 150
+            }
+        }
+
     else
         require('lspconfig')[lsp].setup {
             on_attach = on_attach,

@@ -45,4 +45,5 @@ return require('packer').startup(function()
     use 'mfussenegger/nvim-dap-python'
     use { 'kylechui/nvim-surround', tag = '*' }
     use {'glepnir/dashboard-nvim'}
+    use 'Mofiqul/dracula.nviMofiqul/dracula.nvim'
 end)

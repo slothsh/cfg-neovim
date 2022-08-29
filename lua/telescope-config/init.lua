@@ -19,6 +19,10 @@ require('telescope').setup{
             theme = 'ivy'
         },
 
+        help_tags = {
+            theme = 'ivy'
+        },
+
         marks = {
             theme = 'ivy'
         },
