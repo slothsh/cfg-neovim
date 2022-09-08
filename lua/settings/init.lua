@@ -38,11 +38,11 @@ set.updatetime = 300                           -- Faster completion
 set.timeoutlen = 500                           -- By default timeoutlen is 1000 ms
 set.formatoptions = set.formatoptions - 'cro/' -- Stop newline continution of comments
 set.clipboard = 'unnamedplus'                  -- Copy paste between vim and everything else
-set.signcolumn = 'yes'
+-- set.signcolumn = 'no'
 set.showtabline = 2
 set.scrolloff = 8
 set.ignorecase = true
-set.colorcolumn = '132'
+-- set.colorcolumn = '132'
 set.guicursor = set.guicursor + 'n-v-c-i:blinkon1'
 
 -- Configure default shell to powershell
@@ -52,7 +52,6 @@ if is_os_winnt() then
     set.shellquote = ''
     set.shellxquote = ''
 end
-
 
 -- Vim Move Config
 g.move_key_modifier = 'C'

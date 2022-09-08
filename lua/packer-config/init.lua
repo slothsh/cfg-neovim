@@ -46,4 +46,5 @@ return require('packer').startup(function()
     use { 'kylechui/nvim-surround', tag = '*' }
     use {'glepnir/dashboard-nvim'}
     use 'Mofiqul/dracula.nviMofiqul/dracula.nvim'
+    use 'xiyaowong/nvim-transparent'
 end)

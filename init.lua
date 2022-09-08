@@ -25,6 +25,7 @@ require('dap-python-config')
 require('nvim-surround-config')
 require('movenvim-config')
 require('nvim-dashboard-config')
+require('nvim-transparent-config')
 
 -- User functions
 require('functions.text-editing')
