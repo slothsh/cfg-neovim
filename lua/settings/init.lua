@@ -45,6 +45,7 @@ set.ignorecase = true
 -- set.colorcolumn = '132'
 set.guicursor = set.guicursor + 'n-v-c-i:blinkon1'
 
+
 -- Configure default shell to powershell
 if is_os_winnt() then
     set.shell = 'pwsh.exe'

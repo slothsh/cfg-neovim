@@ -26,6 +26,7 @@ require('nvim-surround-config')
 require('movenvim-config')
 require('nvim-dashboard-config')
 require('nvim-transparent-config')
+require('vimwiki-config')
 
 -- User functions
 require('functions.text-editing')

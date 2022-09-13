@@ -47,4 +47,6 @@ return require('packer').startup(function()
     use {'glepnir/dashboard-nvim'}
     use 'Mofiqul/dracula.nviMofiqul/dracula.nvim'
     use 'xiyaowong/nvim-transparent'
+    use 'vimwiki/vimwiki'
+    use 'ElPiloto/telescope-vimwiki.nvim'
 end)

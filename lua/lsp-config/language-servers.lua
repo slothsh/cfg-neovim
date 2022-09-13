@@ -43,7 +43,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'bashls', 'rls', 'powershell_es', 'sumneko_lua', 'pylsp' }
+local servers = { 'clangd', 'tsserver', 'cmake', 'vuels', 'html', 'cssls', 'bashls', 'rust_analyzer', 'marksman', 'sumneko_lua', 'pylsp', 'jsonls' }
 for _, lsp in pairs(servers) do
 
     if lsp == 'emmet_ls' then
@@ -131,13 +131,12 @@ for _, lsp in pairs(servers) do
             }
         }
 
-    elseif lsp == 'rls' then
+    elseif lsp == 'marksman' then
         require('lspconfig')[lsp].setup {
             on_attach = on_attach,
             capabilities = capabilities,
-            cmd = {"rustup", "run", "nightly", "rls"},
-            init_options = { buildDirectory = 'build' },
-            filetypes = { "rust" },
+            cmd = {'marksman', 'server'},
+            filetypes = { 'markdown' },
             single_file_support = true,
             flags = {
                 debounce_text_changes = 150

@@ -1,3 +1,5 @@
+-- Vim Wiki Extension
+require('telescope').load_extension('vimwiki')
 require('telescope').setup{
     defaults = {
         mappings = {
@@ -6,7 +8,9 @@ require('telescope').setup{
                 ["<C-l>"] = "file_vsplit",
                 ["<C-k>"] = "file_split",
             }
-        }
+        },
+
+        theme = 'ivy'
     },
 
     pickers = {
@@ -70,7 +74,12 @@ require('telescope').setup{
         git_branch = {
             theme = 'ivy'
         },
+
+        vimwiki = {
+            theme = 'ivy'
+        },
     },
 
-    extensions = {}
+    extensions = {
+    }
 }
