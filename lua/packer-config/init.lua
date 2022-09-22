@@ -49,4 +49,5 @@ return require('packer').startup(function()
     use 'xiyaowong/nvim-transparent'
     use 'vimwiki/vimwiki'
     use 'ElPiloto/telescope-vimwiki.nvim'
+    use 'brenoprata10/nvim-highlight-colors'
 end)
