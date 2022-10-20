@@ -13,18 +13,17 @@ vim.g.vimwiki_list = {
 -- Mappings
 local map = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
-vim.g.mapleader = ' '
 
 map('n', '<leader>wi', ':VimwikiIndex<CR>', opts)
 map('n', '<leader>wd', ':VimwikiDiaryIndex<CR>', opts)
 map('n', '<leader>wn', ':VimwikiMakeDiaryNote<CR>', opts)
 map('n', '<leader>wy', ':VimwikiMakeYesterdayDiaryNote<CR>', opts)
 map('n', '<leader>wt', ':VimwikiMakeTomorrowDiaryNote<CR>', opts)
-map('n', '<leader>wgw', ':VimwikiDiaryGenerateLinks<CR>', opts)
+map('n', '<leader>wgi', ':VimwikiGenerateLinks<CR>', opts)
 map('n', '<leader>wgd', ':VimwikiDiaryGenerateLinks<CR>', opts)
 
-map('n', '<leader>dwf', ':VimwikiDeleteFile<CR>', opts)
-map('n', '<leader>rwf', ':VimwikiRenameFile<CR>', opts)
+map('n', '<leader>dw', ':VimwikiDeleteFile<CR>', opts)
+map('n', '<leader>rw', ':VimwikiRenameFile<CR>', opts)
 
 map('n', '<leader>gl', ':VimwikiFollowLink<CR>', opts)
 map('n', '<leader>gb', ':VimwikiGoBackLink<CR>', opts)
