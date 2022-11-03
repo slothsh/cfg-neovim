@@ -3,11 +3,15 @@ vim.cmd([[filetype plugin on]])
 -- vim.cmd([[syntax on]])
 
 -- Master Wiki
-local master_wiki = { path = '~/.wiki', syntax = 'markdown', ext = '.md' }
+local personal_wiki = { path = '~/.wiki/personal', syntax = 'markdown', ext = '.md' }
+local projects_wiki = { path = '~/.wiki/projects', syntax = 'markdown', ext = '.md' }
+local docs_wiki = { path = '~/.wiki/docs', syntax = 'markdown', ext = '.md' }
 
 -- Declare wikis
 vim.g.vimwiki_list = {
-    master_wiki,
+    personal_wiki,
+    projects_wiki,
+    docs_wiki,
 }
 
 -- Mappings
@@ -15,12 +19,13 @@ local map = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
 map('n', '<leader>wi', ':VimwikiIndex<CR>', opts)
-map('n', '<leader>wd', ':VimwikiDiaryIndex<CR>', opts)
+map('n', '<leader>wdi', ':VimwikiDiaryIndex<CR>', opts)
 map('n', '<leader>wn', ':VimwikiMakeDiaryNote<CR>', opts)
 map('n', '<leader>wy', ':VimwikiMakeYesterdayDiaryNote<CR>', opts)
 map('n', '<leader>wt', ':VimwikiMakeTomorrowDiaryNote<CR>', opts)
 map('n', '<leader>wgi', ':VimwikiGenerateLinks<CR>', opts)
 map('n', '<leader>wgd', ':VimwikiDiaryGenerateLinks<CR>', opts)
+map('n', '<leader>wu', ':VimwikiUISelect<CR>', opts)
 
 map('n', '<leader>dw', ':VimwikiDeleteFile<CR>', opts)
 map('n', '<leader>rw', ':VimwikiRenameFile<CR>', opts)
